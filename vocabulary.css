@@ -1,0 +1,200 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    padding: 20px;
+}
+
+.header {
+    background: linear-gradient(135deg, #001f3f, #004080); /* Navy gradient */
+    color: white;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    text-decoration: none;
+}
+
+.sitename {
+    margin: 0;
+    font-size: 24px;
+}
+
+.navmenu {
+    flex-grow: 1;
+}
+
+.navmenu ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+}
+
+.navmenu li {
+    margin-left: 20px;
+    background-color: rgba(255, 255, 255, 0.2); /* Semi-transparent background */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 15px; /* Padding for the boxes */
+    transition: background-color 0.3s; /* Smooth transition for hover effects */
+}
+
+.navmenu li:hover {
+    background-color: rgba(255, 255, 255, 0.4); /* Slightly more opaque on hover */
+}
+
+.navmenu a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navmenu a:hover,
+.navmenu a.active {
+    color: #f9ffef; /* Change hover color */
+}
+
+/* Container styles */
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: rgb(194, 194, 194);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+/* Headings */
+h1, h2 {
+    text-align: center;
+    color: #009bac; /* Sand color */
+}
+
+/* Search filter */
+.search-filter {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#search-bar {
+    width: 70%;
+    padding: 10px;
+    border: 2px solid #000080;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#search-bar:focus {
+    border-color: #000080; 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Difficulty filters */
+.difficulty-filters {
+    display: flex;
+    gap: 15px; /* Space between checkboxes */
+    align-items: center; /* Align items vertically */
+}
+
+/* Lesson list */
+.lesson-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.lesson-item {
+    background: #f7faf3; /* Sand color */
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 5px solid #000080;
+}
+
+/* Lesson buttons */
+.lesson-button,
+#prev-button,
+#next-button,
+button {
+    background: #000080; /* Blue button */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s; /* Animation on background and transform */
+    position: relative; /* Required for the pseudo-element */
+    overflow: hidden; /* Hide the pseudo-element overflow */
+}
+
+.lesson-button:hover,
+#prev-button:hover,
+#next-button:hover,
+button:hover {
+    background: black; /* Darker color on hover */
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+.lesson-button::after,
+#prev-button::after,
+#next-button::after,
+button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%; /* Make it larger than the button */
+    height: 300%; /* Make it larger than the button */
+    background: rgba(255, 255, 255, 0.2); /* Light overlay */
+    border-radius: 50%; /* Circle shape */
+    transition: all 0.4s ease; /* Transition for the overlay */
+    transform: translate(-50%, -50%) scale(0); /* Start scaled down */
+}
+
+.lesson-button:hover::after,
+#prev-button:hover::after,
+#next-button:hover::after,
+button:hover::after {
+    transform: translate(-50%, -50%) scale(1); /* Scale up the overlay */
+}
+
+/* Exercises and content */
+#exercises {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;
+    background: #e4eada; /* Sand color */
+}
+
+#content {
+    margin: 20px 0;
+    font-size: 1.1em;
+}
+
+/* Completion screen */
+#completion-screen {
+    text-align: center;
+}
+.bot{
+    
+}

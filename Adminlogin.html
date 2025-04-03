@@ -1,0 +1,15 @@
+<div id="adminLoginContainer" class="form-container" style="display: none;">
+    <h1>Admin Login</h1>
+    <form id="adminLoginForm">
+        <div class="form-group">
+            <label for="adminUsername">Username or Email</label>
+            <input type="text" id="adminUsername" name="adminUsername" placeholder="Enter your username or email" required>
+        </div>
+        <div class="form-group">
+            <label for="adminPassword">Password</label>
+            <input type="password" id="adminPassword" name="adminPassword" placeholder="Enter your password" required minlength="8">
+        </div>
+        <button type="submit">Login</button>
+        <p id="adminLoginErrorMessage" class="error-message"></p>
+    </form>
+</div>

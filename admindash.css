@@ -1,0 +1,171 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #bca6f8; /* Lighter purple */
+    color: #fff; /* White text for better contrast */
+    padding: 20px;
+}
+
+header {
+    background-color: #d4c3f4; /* Soft purple */
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    animation: slideIn 0.5s ease-in; /* Slide-in animation for header */
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: rgba(255, 182, 193, 0.9); /* Light pink with transparency */
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    color: black; /* Retained black for better readability against light background */
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #5e2f91; /* Darker purple */
+}
+
+.search-filter {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#search-bar, #department-filter {
+    padding: 10px;
+    border: 2px solid #7c4dff; /* Lighter purple */
+    border-radius: 5px;
+    outline: none;
+    background-color: #fff; /* Light background for inputs */
+    color: #333; /* Dark text for readability */
+}
+
+.report-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.report-item {
+    background: rgba(255, 255, 255, 0.9); /* White background for names */
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-left: 5px solid #7c4dff; /* Lighter purple */
+    color: black; /* Black text for names */
+}
+
+.report-button {
+    background: #c2185b; /* Dark glossy pink */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.report-button:hover {
+    background: #ab003c; /* Darker glossy pink */
+}
+
+.outline {
+    margin: 2%;
+    padding: 100px;
+    background-color: rgba(255, 182, 193, 0.8); /* Light glossy pink */
+}
+
+/* Navigation Styles */
+.navmenu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navmenu ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navmenu li {
+    margin-left: 20px;
+}
+
+.navmenu a {
+    color: #ffeb3b; /* Bright yellow for contrast */
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s; /* Add transform for hover effect */
+}
+
+.navmenu a:hover,
+.navmenu a.active {
+    color: #ff4081; /* Dark glossy pink on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.btn-getstarted {
+    background-color: #ff4081; /* Dark glossy pink */
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s; /* Button animation */
+}
+
+.btn-getstarted:hover {
+    background-color: #c51162; /* Darker glossy pink on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Mobile styles */
+.mobile-nav-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .navmenu ul {
+        flex-direction: column;
+        display: none;
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        right: 0;
+        background-color: white; /* Same white background */
+        width: 200px;
+        padding: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for dropdown */
+    }
+
+    .navmenu.active ul {
+        display: flex;
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        color: #2c5f2d; /* Dark green toggle icon */
+        font-size: 24px;
+        cursor: pointer;
+    }
+}

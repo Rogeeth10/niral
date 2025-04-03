@@ -1,0 +1,151 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #EDE7F6; /* Very Light Purple */
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+#header {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #4A148C; /* Dark Purple */
+}
+
+#header button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #1E1E78; /* Even Darker Blue */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#header button:hover {
+    background-color: #3F51B5; /* Blue */
+}
+
+#container {
+    max-width: 400px;
+    margin: 50px auto; /* 4 sides margin */
+    padding: 20px;
+    background: #4A148C; /* Dark Purple */
+    border-radius: 30px; /* Rounded corners */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* 3D effect */
+    position: relative; /* For the outline effect */
+}
+
+#container::before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    border: 2px solid #6A1B9A; /* Outline Color (Lighter Purple) */
+    border-radius: 35px; /* Slightly larger than the container */
+    pointer-events: none; /* Allows clicks to pass through */
+}
+
+h1 {
+    text-align: center;
+    color: #EDE7F6; /* Light color for contrast */
+}
+
+.form-container {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #EDE7F6; /* Light color for contrast */
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 90%;
+    padding: 10px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    background-color: #EDEFF7; /* Lighter Light Purple */
+    border: none;
+    border-bottom: 2px solid #3F51B5; /* Blue */
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+    border: none;
+    box-shadow: 0 0 5px #3F51B5; /* Blue */
+}
+
+button {
+    width: auto;
+    padding: 10px;
+    background: #1E1E78; /* Even Darker Blue */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background: #3F51B5; /* Blue */
+    transform: scale(1.05); /* Slightly enlarge button */
+}
+
+.links {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.links a {
+    color: #EDE7F6; /* Light color for contrast */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.links a:hover {
+    color: #7E57C2; /* Medium Purple */
+}
+
+.error-message, .recovery-message, .sign-up-message {
+    color: red;
+    text-align: center;
+}
+
+.sign-up-message {
+    color: #DAF7A6; /* Adjust as needed */
+}
+
+.fbutton {
+    color: #7E57C2; /* Even Darker Blue */
+    align-self: center;
+    padding: 10px 20px;
+}
+
+.fbutton a:active {
+    color: #2b2ba5; /* Even Darker Blue */
+    border-radius: 20px;
+}
+
+
+
+table:hover {
+    background-color: #EDEFF7; /* Lighter Light Purple */
+}
+
+.outline {
+    margin: 2%; /* Added margin */
+    padding: 50px;
+    background-color: #EDE7F6; /* Very Light Purple */
+}

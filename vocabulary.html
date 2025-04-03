@@ -1,0 +1,80 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="vocabulary.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+
+    <title>Vocabulary Lessons</title>
+</head>
+<body>
+
+    <header id="header" class="header d-flex align-items-center sticky-top">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center">
+            <a href="index.html" class="logo d-flex align-items-center me-auto">
+                <h1 class="sitename">Soft Skill Enhancement AI Application</h1>
+            </a>
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="home.html" class="active">Home<br></a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+        </div>
+    </header>
+
+    <br>
+
+    <div class="container" id="main-screen">
+        <h1>Vocabulary Lessons</h1>
+        <div class="search-filter">
+            <input type="text" id="search-bar" placeholder="Search for lessons...">
+            <div class="difficulty-filters">
+               <br> <label ><input name="check" type="radio" class="difficulty-filter" value="beginner"> Beginner</label>
+             <br>   <label><input name="check" type="radio" class="difficulty-filter" value="intermediate"> Intermediate</label>
+              <br>
+                <label><input name="check" type="radio" class="difficulty-filter" value="advanced"> Advanced</label>
+            </div>
+        </div>
+        <ul id="lesson-list" class="lesson-list">
+            <!-- Lessons will be dynamically populated here -->
+        </ul>
+    </div>
+
+    <div class="container" id="detail-screen" style="display: none;">
+        <h2 id="lesson-title"></h2>
+        <p id="lesson-description"></p>
+        <p id="lesson-difficulty"></p>
+        <button onclick="startLesson()">Start Lesson</button>
+        <button onclick="goBackToMain()">Back to Lessons</button>
+    </div>
+
+    <div class="container" id="content-screen" style="display: none;">
+        <h2 id="content-title"></h2>
+        <div id="content"></div>
+        <div id="exercises"></div>
+        <button id="prev-button" onclick="previousLessonContent()" style="display:none;">Previous</button>
+        <button id="next-button" onclick="nextLessonContent()" style="display:none;">Next</button>
+        <button onclick="completeLesson()">Complete Lesson</button>
+    </div>
+
+    <div class="container" id="completion-screen" style="display: none;">
+        <h2>Congratulations!</h2>
+        <p>You have completed the lesson.</p>
+        <button onclick="reviewLesson()">Review Lesson</button>
+        <button onclick="nextLesson()">Next Lesson</button>
+        <button onclick="returnToMain()">Return to Lessons</button>
+    </div>
+<br>
+<br>
+    <div>
+        <center><a href="voca_bot.html"><img class="bot" src="bot-img.jpg"></a>
+        </center></div>
+
+    <script src="vocabulary.js"></script>
+</body>
+</html>
+

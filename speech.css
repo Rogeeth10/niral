@@ -1,0 +1,160 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333; /* Dark text color */
+}
+
+.header {
+    color: white;
+    background: linear-gradient(135deg, #1b9cb5, #85e6f9);
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    text-decoration: none;
+    color: #220058; /* Logo color */
+}
+
+.sitename {
+    margin: 0;
+    font-size: 24px;
+}
+
+.navmenu {
+    flex-grow: 1;
+}
+
+.navmenu ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+}
+
+.navmenu li {
+    margin-left: 15px; /* Reduced margin */
+    background-color: rgba(0, 0, 128, 0.8); /* Navy background */
+    border-radius: 5px; /* Rounded corners */
+    padding: 8px 12px; /* Padding for buttons */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.navmenu li a {
+    color: white; /* White text color */
+    text-decoration: none;
+    font-size: 14px; /* Reduced font size for smaller buttons */
+    display: block; /* Make the link fill the box */
+    padding: 0; /* Remove extra padding from link */
+}
+
+.navmenu li:hover {
+    background-color: rgba(0, 0, 128, 1); /* Darker navy on hover */
+}
+
+/* Lesson list styles */
+.lesson-list {
+    list-style-type: none;
+    padding: 20px;
+    margin: 20px 0;
+    background: rgb(194, 194, 194);
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+}
+
+.lesson-item {
+    background: #eef6de; 
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s; /* Animation for list item */
+    border-left: 5px solid #000080;
+}
+
+.lesson-item:hover {
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Button animation styles */
+.lesson-button {
+    background: #000080; /* Blue button */
+    color: #ffffff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.2s, background-color 0.3s; /* Animation effects */
+}
+
+.lesson-button:hover {
+    transform: scale(1.1); /* Scale effect on hover */
+    background-color: black; /* Dark background on hover */
+}
+
+/* Search filter styles */
+.search-filter {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#search-bar {
+    width: 70%;
+    padding: 10px;
+    border: 2px solid #000080;
+    border-radius: 5px;
+    outline: none;
+}
+
+#search-bar:focus {
+    border-color: #000080; 
+    box-shadow: 0 0 5px rgba(0, 0, 128, 0.5); /* Light blue glow */
+}
+
+/* Mobile styles */
+.mobile-nav-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .navmenu ul {
+        flex-direction: column;
+        display: none;
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        right: 0;
+        background-color: white; /* Same white background */
+        width: 200px;
+        padding: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for dropdown */
+    }
+
+    .navmenu.active ul {
+        display: flex;
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        color: #2c5f2d; /* Green toggle icon */
+        font-size: 24px;
+        cursor: pointer;
+    }
+}

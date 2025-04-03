@@ -1,0 +1,233 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333; /* Dark text color */
+    padding: 20px;
+}
+
+.header {
+    background: linear-gradient(135deg, #1b9cb5, #85e6f9);
+    color: white; /* White text color */
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    text-decoration: none;
+    color: #1b5e20; /* Dark green logo color */
+}
+
+.sitename {
+    margin: 0;
+    font-size: 24px;
+}
+
+.navmenu {
+    flex-grow: 1;
+}
+
+.navmenu ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+}
+
+.navmenu li {
+    margin-left: 20px;
+    background-color: rgba(0, 0, 128, 0.8); /* Navy blue background */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 15px; /* Padding for the boxes */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.navmenu a {
+    color: white; /* White text color */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navmenu li:hover {
+    background-color: rgba(0, 0, 128, 1); /* Darker navy blue on hover */
+}
+
+.navmenu a:hover,
+.navmenu a.active {
+    color: #DAF7A6; /* Lighter green for hover/active */
+}
+
+/* Container for lessons */
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: rgb(194, 194, 194);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.container:hover {
+    transform: scale(1.01);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #000000; /* Sand color */
+    font-size: 2.5em;
+}
+
+.search-filter {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#search-bar {
+    width: 70%;
+    padding: 10px;
+    border: 2px solid #000080; /* Navy border */
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#search-bar:focus {
+    border-color: #000080; 
+    box-shadow: 0 0 5px rgba(0, 0, 128, 0.5);
+}
+
+#difficulty-filter {
+    width: 25%;
+    padding: 10px;
+    border: 2px solid #000080; /* Navy border */
+    border-radius: 5px;
+    background: white; /* White background */
+    transition: border-color 0.3s;
+}
+
+#difficulty-filter:focus {
+    border-color: #000080; /* Navy border on focus */
+}
+
+.lesson-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.lesson-item {
+    background: #ecf7d6; /* Sand color */
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-left: 5px solid #000080; /* Navy border */
+}
+
+.lesson-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.lesson-button {
+    background: #000080; /* Navy button */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s; /* Scale effect */
+    font-weight: bold;
+}
+
+.lesson-button:hover {
+    background: black; /* Darker color on hover */
+    transform: scale(1.05); /* Scale effect */
+}
+
+.lesson-button:active {
+    transform: scale(0.95);
+}
+
+.lesson-content {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: rgb(194, 194, 194); /* Light gray for content */
+    border: 1px solid #d3d3d3;
+    border-radius: 5px;
+}
+
+.try-yourself-button {
+    background: #000080; /* Navy button */
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s; /* Scale effect */
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.try-yourself-button:hover {
+    background: black; /* Darker color on hover */
+    transform: scale(1.05); /* Scale effect */
+}
+
+.try-yourself-button:active {
+    transform: scale(0.95);
+}
+
+.lesson-item span {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* Mobile styles */
+.mobile-nav-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .navmenu ul {
+        flex-direction: column;
+        display: none;
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        right: 0;
+        background-color: #ffffff; /* Same white background */
+        width: 200px;
+        padding: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for dropdown */
+    }
+
+    .navmenu.active ul {
+        display: flex;
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        color: #2e7d32; /* Green toggle icon */
+        font-size: 24px;
+        cursor: pointer;
+    }
+}

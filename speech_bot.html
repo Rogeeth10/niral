@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Speech Test Chatbot</title>
+  <link rel="stylesheet" href="speech_bot.css">
+</head>
+<body style=" background-image: url('bot_bg.webp')"></body>
+
+  <!-- Chatbot Container -->
+  <div id="chatbox">
+    <div id="chatbox-header">Speech Test Chatbot</div>
+    <div id="chat-content"></div>
+    <div id="user-input">
+      <input type="text" id="user-text" placeholder="Type your response here..." />
+      <button class="button" onclick="handleUserInput()">Send</button>
+      <button class="button" id="record-btn" onclick="toggleRecording()">Record</button>
+    </div>
+  </div>
+
+  <script src="speech_bot.js"></script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #000000; /* Text color */
+    padding: 20px;
+}
+
+/* Header styles */
+.header {
+    background: linear-gradient(135deg, #0073e6, #66b3ff); /* Blue gradient */
+    color: white; /* Text color */
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    text-decoration: none;
+    color: #DAF7A6; /* Logo color */
+}
+
+.sitename {
+    margin: 0;
+    font-size: 24px;
+}
+
+.navmenu {
+    flex-grow: 1;
+}
+
+.navmenu ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+}
+
+.navmenu li {
+    margin-left: 20px;
+    background: #005bb5; /* Dark blue for boxes */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 15px; /* Padding for buttons */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.navmenu a {
+    color: white; /* Link color */
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s; /* Add transform for hover effect */
+}
+
+.navmenu li:hover {
+    background-color: #004080; /* Darker blue on hover */
+}
+
+.navmenu a:hover,
+.navmenu a.active {
+    color: #98b75d; /* Lighter color for hover/active */
+    transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+/* Container for reports */
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: rgb(194, 194, 194);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+}
+
+/* Header title */
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #000000;
+    font-size: 2.5em;
+}
+
+/* Search filter styles */
+.search-filter {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#search-bar {
+    width: 50%;
+    padding: 10px;
+    border: 2px solid #000080;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#search-bar:focus {
+    border-color: #000080; 
+    box-shadow: 0 0 5px rgba(0, 0, 128, 0.5);
+}
+
+#type-filter, #date-filter {
+    width: 25%;
+    padding: 10px;
+    border: 2px solid #5f1892;
+    border-radius: 5px;
+    background: #f0f4f8; /* Light background for select */
+    transition: border-color 0.3s;
+}
+
+#type-filter:focus, #date-filter:focus {
+    background: #000080; /* Blue background on focus */
+}
+
+/* Report list styles */
+.report-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.report-item {
+    background: #dfefc1; /* Light green for report item */
+    margin: 20px 0; /* Added margin for spacing */
+    padding: 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-left: 5px solid #000080; /* Left border color */
+}
+
+.report-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.report-button {
+    background: #000080; /* Blue button */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s; /* Button animation */
+    font-weight: bold;
+}
+
+.report-button:hover {
+    background: black; /* Darker color on hover */
+    transform: scale(1.05);
+}
+
+.report-button:active {
+    transform: scale(0.95);
+}
+
+.report-item span {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+/* Mobile styles */
+.mobile-nav-toggle {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .navmenu ul {
+        flex-direction: column;
+        display: none;
+        position: absolute;
+        top: 60px; /* Adjust based on header height */
+        right: 0;
+        background-color: white; /* Background for dropdown */
+        width: 200px;
+        padding: 10px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow for dropdown */
+    }
+
+    .navmenu.active ul {
+        display: flex;
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        color: #2c5f2d; /* Toggle icon color */
+        font-size: 24px;
+        cursor: pointer;
+    }
+}

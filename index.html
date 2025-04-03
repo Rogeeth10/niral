@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="Login.css">
+    <style>
+        body {
+            background-image: url('loginbg'); /* Path to your image */
+            background-size: cover; /* Cover the entire background */
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* No repeat */
+            margin: 0; /* Remove default margin */
+            height: 100vh; /* Full height */
+        }
+
+        h2 {
+            text-align: center;
+            color: #4A148C; /* Dark Purple */
+            font-size: 2.5em; /* Font size */
+            margin-bottom: 20px; /* Spacing */
+        }
+
+        .outline {
+            background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+            padding: 20px; /* Padding */
+            border-radius: 10px; /* Rounded corners */
+            max-width: 400px; /* Max width */
+            margin: auto; /* Center */
+            position: relative; /* Positioning for centering */
+            top: 50%; /* Center vertically */
+            transform: translateY(-50%); /* Adjust positioning */
+        }
+
+        .form-container {
+            margin-top: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 0.9em;
+        }
+
+        .links {
+            margin-top: 10px;
+        }
+
+        .flink {
+            display: inline-block;
+            background-color: #353333; /* Button color */
+            color: rgb(52, 50, 50);
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .fbutton {
+            text-align: center; /* Center align button */
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #4A148C; /* Button color */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body style="background-image:url('loginbg.jpg');">
+    <br>
+    <br>
+    <h2>Soft Skill Enhancement AI Application</h2> <!-- Added title -->
+    <div class="outline">
+        <div id="header">
+            <button id="adminLoginButton" class="Bouter">Admin Login</button>
+            <button id="userLoginButton" class="Bouter">User Login</button>
+        </div>
+        <div id="container">
+            <!-- User Login Form -->
+            <div id="userLoginContainer" class="form-container">
+                <h1>User Login</h1>
+                <form id="loginForm">
+                    <div class="form-group">
+                        <label for="username">Username or Email</label>
+                        <input type="text" id="username" name="username" placeholder="Enter your username or email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Enter your password" required minlength="8">
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" id="rememberMe" name="rememberMe">
+                        <label for="rememberMe">Remember Me</label>
+                    </div>
+                    <table>
+                        <td class="fbutton">
+                            <a class="flink" href="home.html" style="color: white; text-decoration:none;">Login</a>
+                        </td>
+                    </table>
+                    <div class="links">
+                        <a href="#" id="forgotPasswordLink">Forgot Password?</a>
+                        <a href="#" id="signUpLink">Sign Up</a>
+                    </div>
+                    <p id="loginErrorMessage" class="error-message"></p>
+                </form>
+            </div>
+
+            <!-- Admin Login Form -->
+            <div id="adminLoginContainer" class="form-container" style="display: none;">
+                <h1>Admin Login</h1>
+                <form id="adminLoginForm">
+                    <div class="form-group">
+                        <label for="adminUsername">Username or Email</label>
+                        <input type="text" id="adminUsername" name="adminUsername" placeholder="Enter your username or email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="adminPassword">Password</label>
+                        <input type="password" id="adminPassword" name="adminPassword" placeholder="Enter your password" required minlength="8">
+                    </div>
+                    <table>
+                        <td class="fbutton">
+                            <a class="flink" href="admindash.html" style="color: white; text-decoration:none;">Login</a>
+                        </td>
+                    </table>
+                    <p id="adminLoginErrorMessage" class="error-message"></p>
+                    <div class="form-group">
+                        <input type="checkbox" id="rememberMeAdmin" name="rememberMeAdmin">
+                        <label for="rememberMeAdmin">Remember Me</label>
+                    </div>
+                    <div class="links">
+                        <a href="#" id="forgotPasswordLinkAdmin">Forgot Password?</a>
+                        <a href="#" id="signUpLinkAdmin">Sign Up</a>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Password Recovery Form -->
+            <div id="recoveryContainer" class="form-container" style="display: none;">
+                <h1>Password Recovery</h1>
+                <form id="recoveryForm">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your registered email" required>
+                    </div>
+                    <button type="submit">Submit</button>
+                    <div class="links">
+                        <a href="#" id="backToLoginLink">Back to Login</a>
+                    </div>
+                    <p id="recoveryMessage" class="recovery-message"></p>
+                </form>
+            </div>
+
+            <!-- Sign Up Form -->
+            <div id="signUpContainer" class="form-container" style="display: none;">
+                <h1>Sign Up</h1>
+                <form id="signUpForm">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signUpEmail">Email</label>
+                        <input type="email" id="signUpEmail" name="signUpEmail" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="signUpPassword">Password</label>
+                        <input type="password" id="signUpPassword" name="signUpPassword" placeholder="Enter your password" required minlength="8">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmSignUpPassword">Confirm Password</label>
+                        <input type="password" id="confirmSignUpPassword" name="confirmSignUpPassword" placeholder="Re-enter your password" required minlength="8">
+                    </div>
+                    <button type="submit">Sign Up</button>
+                    <div class="links">
+                        <a href="#" id="backToLoginFromSignUpLink">Back to Login</a>
+                    </div>
+                    <p id="signUpMessage" class="sign-up-message"></p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="Login.js"></script>
+</body>
+</html>

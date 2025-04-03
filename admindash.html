@@ -1,0 +1,123 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin dash</title>
+    <link rel="stylesheet" href="admindash.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #EDE7F6; /* Very Light Purple */
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .outline {
+            max-width: 800px; /* Adjusted width */
+            margin: 50px auto; /* Centered with margin */
+            padding: 20px;
+            background: #4A148C; /* Dark Purple */
+            border-radius: 30px; /* Rounded corners */
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* 3D effect */
+        }
+
+        .container {
+            padding: 20px;
+            color: #EDE7F6; /* Light color for contrast */
+        }
+
+        .search-filter {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        #search-bar {
+            padding: 10px;
+            width: 70%; /* Adjusted width */
+        }
+
+        #department-filter {
+            padding: 10px;
+        }
+
+        .report-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px; /* Added margin for spacing */
+        }
+        
+        /* Header Styles */
+        #header {
+            background: linear-gradient(135deg, #1b9cb5, #85e6f9);
+            padding: 15px;
+            color: #EDE7F6; /* Light color for contrast */
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            color: #EDE7F6; /* Light color for contrast */
+            text-decoration: none;
+        }
+
+        .navmenu ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            gap: 15px; /* Space between nav items */
+        }
+
+        .navmenu a {
+            color: #EDE7F6; /* Light color for contrast */
+            text-decoration: none;
+        }
+
+       
+        
+    </style>
+</head>
+<body>
+    <header id="header" class="header d-flex align-items-center sticky-top">
+        <div class="container-fluid container-xl position-relative d-flex align-items-center">
+            <a href="index.html" class="logo d-flex align-items-center me-auto">
+                <h1 class="sitename">Soft Skill Enhancement AI Application</h1>
+            </a>
+
+            <nav id="navmenu" class="navmenu">
+                <ul>
+                    <li><a href="" class="active">Home</a></li>
+                    
+                </ul>
+            
+            </nav>
+
+            
+        </div>
+    </header>
+
+    <div class="outline">
+        <div class="container">
+            <h2>English Soft Skills Exam Results</h2>
+            <div class="search-filter">
+                <input type="text" id="search-bar" placeholder="Search by name...">
+                <select id="department-filter">
+                    <option value="">All Departments</option>
+                    <option value="sales">Sales</option>
+                    <option value="hr">HR</option>
+                    <option value="it">IT</option>
+                    <option value="marketing">Marketing</option>
+                </select>
+            </div>
+            <ul class="report-list" id="report-list"></ul>
+        </div>
+    </div>
+    <script src="admindash.js"></script>
+</body>
+</html>
